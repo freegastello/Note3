@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Использование: $('.box');
+  var $ = function(element) {
+    return document.querySelectorAll(element);
+  };
+
+
+
+
+
+
+
+
+
 
 // Щёлкни по любой части экрана
   addEventListener("click", function () {
@@ -104,5 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.key === 'v' || event.key === 'V' || event.key === 'м' || event.key === 'М')
       document.body.style.background = "";
   });
+
 
 }, false);
