@@ -66,13 +66,13 @@ public class NoteController {
         return "index";
     }
 
-    // Ajax POST Json запрос
-    @PostMapping("/jsontest")
-    public String jsonTest(String id_product, String qty_product) {
-        System.out.println("jsontest:" + "id_product=" + id_product + ", qty_product=" + qty_product);//jsontest:id_product=999, qty_product=777
-        return "index";
-    }
-
+//    // Ajax POST Json запрос
+//    @PostMapping("/jsontest")
+//    public List<Book> jsonTest(String id_product, String qty_product) {
+//        System.out.println("jsontest:" + "id_product=" + id_product + ", qty_product=" + qty_product);//jsontest:id_product=999, qty_product=777
+//        List<Book> books = bookService.getAllList();
+//        return books;
+//    }
 
 
 //    private String sortDateMethod = "ASC";

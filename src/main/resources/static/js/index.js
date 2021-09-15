@@ -62,9 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Указываем путь до файла на сервере, который будет обрабатывать наш запрос
     const url = "/posttest";
     // Так же как и в GET составляем строку с данными, но уже без пути к файлу
-    const params =
-      "text=" + id_post_1 +
-      "&twoparametr=" + id_post_2;
+    // const params = "text=" + id_post_1 + "&twoparametr=" + id_post_2;
     /* Указываем что соединение	у нас будет POST, говорим что путь к файлу в переменной url, и что запрос у нас
     асинхронный, по умолчанию так и есть не стоит его указывать, еще есть 4-й параметр пароль авторизации, но этот
       параметр тоже необязателен.*/
@@ -77,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
     // Вот здесь мы и передаем строку с данными, которую формировали выше. И собственно выполняем запрос.
-    request.send(params);
+    // request.send(params);
+    request.send();
   });
 
 
@@ -92,12 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const url = "/jsontest";
     const params = "id_product=" + id_product + "&qty_product=" + qty_product;
     // Здесь нужно указать в каком формате мы будем принимать данные вот и все	отличие
-    request.responseType = "json";
+    // request.responseType = "json";
     request.open("POST", url, true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.addEventListener("readystatechange", () => {
       if (request.readyState === 4 && request.status === 200) {
         let obj = request.response;
+        insertTable(obj);
         console.log(obj);
         // // Здесь мы можем обращаться к свойству объекта и получать	его значение
         // console.log(obj.id_product);

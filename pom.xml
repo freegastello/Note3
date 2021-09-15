@@ -76,6 +76,15 @@
 		<!--			<groupId>org.springframework.session</groupId>-->
 		<!--			<artifactId>spring-session-core</artifactId>-->
 		<!--		</dependency>-->
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
