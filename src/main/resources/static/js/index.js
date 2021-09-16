@@ -96,9 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.addEventListener("readystatechange", () => {
       if (request.readyState === 4 && request.status === 200) {
-        let obj = request.response;
-        insertTable(obj);
-        console.log(obj);
+        // let obj = request.response;// так всё выводит сплошным текстом
+        const list = eval("(" + request.responseText + ")");// Обязательно обрабатывать!!!
+        // insertTable(obj);
+        createTable(document.getElementById('contayner'), list);
+        console.log(list);
+
         // // Здесь мы можем обращаться к свойству объекта и получать	его значение
         // console.log(obj.id_product);
         // console.log(obj.qty_product);
