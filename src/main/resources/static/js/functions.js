@@ -33,7 +33,7 @@ function insertTable(list) {
 // replaceWith – заменяет node заданными узлами или строками.-
 
 
-
+  // Вариант вставки:
   // const p = document.createElement('p');
   // p.id = 'this333';
   // p.innerHTML = '333';
@@ -78,7 +78,7 @@ function insertTable(list) {
   // document.getElementById('insertTable').innerHTML=html;
 
 
-  // // Создание таблицы - работает
+  // // Создание таблицы - работает:
   // var newElem = document.createElement('table');
   // var newRow = newElem.insertRow(0);
   // var newCell = newRow.insertCell(0);
@@ -89,7 +89,7 @@ function insertTable(list) {
 
 
 
-  // //
+  // // Варианты вставок:
   // const p7 = document.createElement('p');
   // p7.id = 'this777';
   // p7.innerHTML = '777';
@@ -134,7 +134,6 @@ function insertTable(list) {
 
 }
 
-thead
 
 // function createTable(tbody, list) {
 function createTable(list) {
