@@ -99,8 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // let obj = request.response;// так всё выводит сплошным текстом
         const list = eval("(" + request.responseText + ")");// Обязательно обрабатывать!!!
         // insertTable(obj);
-        createTable(document.getElementById('contayner'), list);
-        console.log(list);
+        // createTable(document.getElementById('contayner'), list);
+        createTable(list);
+        // console.log(list);
 
         // // Здесь мы можем обращаться к свойству объекта и получать	его значение
         // console.log(obj.id_product);

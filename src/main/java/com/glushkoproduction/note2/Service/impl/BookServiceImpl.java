@@ -36,10 +36,6 @@ public class BookServiceImpl implements BookService {
         return bookRepository.getById(id);
     }
 
-    @Override
-    public List<Book> getAllList() {
-        return bookRepository.findAll();
-    }
 
     List<ModelListBook> createModelListBook(List<Book> list){
         List<ModelListBook> modelListBooks = new ArrayList<>();

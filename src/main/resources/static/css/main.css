@@ -2,8 +2,8 @@
 /* CSS Документ */
 /* Для всех элементов страницы внутренние и внешние отступы делаем = 0 */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Для списков отменим маркер*/
@@ -14,6 +14,27 @@ ul {
 body {
     background: #fff;
     font: 14px/1.43 Arial, Helvetica, sans-serif;
+}
+
+div {
+    margin: 5px 2px; /* Отступы снаружи */
+    padding: 2px; /* Отступы внутри */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px;
+    border: 1px solid maroon;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid maroon;
+    text-align: left;
 }
 
 h3 {

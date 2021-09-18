@@ -1,6 +1,7 @@
 package com.glushkoproduction.note2.controller;
 
 import com.glushkoproduction.note2.Service.BookService;
+import com.glushkoproduction.note2.dto.ModelListBook;
 import com.glushkoproduction.note2.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +20,8 @@ public class BookRestController {
 
     // Ajax POST Json запрос
     @PostMapping("/jsontest")
-    public List<Book> jsonTest() {
-        return bookService.getAllList();
+    public List<ModelListBook> jsonTest() {
+        return bookService.findAll();
     }
 
 //    @GetMapping("/")

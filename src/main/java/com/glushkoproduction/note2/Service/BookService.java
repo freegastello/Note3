@@ -9,5 +9,4 @@ public interface BookService {
     List<ModelListBook> findAll();
     void saveAll(List<Book> bookList);
     Book getById(long id);
-    List<Book> getAllList();
 }

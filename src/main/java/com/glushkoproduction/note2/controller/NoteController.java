@@ -39,6 +39,7 @@ public class NoteController {
     public ModelAndView list(ModelAndView modelAndView) {
         List<ModelListNote> noteList = noteService.myAll();
         modelAndView.addObject("notes", noteList);
+
         List<ModelListBook> bookList = bookService.findAll();
         modelAndView.addObject("books", bookList);
         modelAndView.setViewName("index");

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function insertTable(list) {
-  const insTable = document.querySelector('#insertTable');
+
 
 // Внутри: 222 -> 444 -> 333 -> 222 -> 111
 
@@ -134,28 +134,80 @@ function insertTable(list) {
 
 }
 
+thead
+
+// function createTable(tbody, list) {
+function createTable(list) {
+  const insertTable = document.querySelector('#insertTable');
+  var table = document.createElement('table');
+  table.id = 'tableCreate';
+
+  // table.setAttribute('border', '5');//Можно и так добавлять атрибуты. Но лучше через CSS
+  //table.border=5;                    //Можно и так добавлять атрибуты. Но лучше через CSS
+
+  var thead = document.createElement('thead');
+  thead.setAttribute('id','theadBook');
+
+  var tbody = document.createElement('tbody');
+  tbody.setAttribute('id','contayner');
+
+  table.append(thead);
+  table.append(tbody);
+  insertTable.append(table);
 
 
-function createTable(tbody, list) {
+  var thtr = document.createElement('tr');
+  var thId = document.createElement('td');
+  var thCreateDate = document.createElement('td');
+  var thCreateTime = document.createElement('td');
+  var thLastSaveDate = document.createElement('td');
+  var thLastSaveTime = document.createElement('td');
+  var thName = document.createElement('td');
+  var thYear = document.createElement('td');
+
+  thId.innerText = 'id';
+  thCreateDate.innerText = 'Дата открытия';
+  thCreateTime.innerText = 'Время открытия';
+  thLastSaveDate.innerText = 'Дата посл. изм.';
+  thLastSaveTime.innerText = 'Время  посл. изм.';
+  thName.innerText = 'Наименование';
+  thYear.innerText = 'Год';
+
+  thtr.appendChild(thId);
+  thtr.appendChild(thCreateDate);
+  thtr.appendChild(thCreateTime);
+  thtr.appendChild(thLastSaveDate);
+  thtr.appendChild(thLastSaveTime);
+  thtr.appendChild(thName);
+  thtr.appendChild(thYear);
+
+  thead.appendChild(thtr);
+
   list.forEach(function(items) {
     var tr = document.createElement('tr');
     var tdId = document.createElement('td');
-    var tdCreateDateTime = document.createElement('td');
+    var tdCreateDate = document.createElement('td');
+    var tdCreateTime = document.createElement('td');
+    var tdLastSaveDate = document.createElement('td');
+    var tdLastSaveTime = document.createElement('td');
     var tdName = document.createElement('td');
     var tdYear = document.createElement('td');
-    var tdLastSaveDateTime = document.createElement('td');
 
     tdId.innerText = items.id;
-    tdCreateDateTime.innerText = items.createDateTime;
+    tdCreateDate.innerText = items.createDate;
+    tdCreateTime.innerText = items.createTime;
+    tdLastSaveDate.innerText = items.lastSaveDate;
+    tdLastSaveTime.innerText = items.lastSaveTime;
     tdName.innerText = items.name;
     tdYear.innerText = items.year;
-    tdLastSaveDateTime.innerText = items.lastSaveDateTime;
 
     tr.appendChild(tdId);
-    tr.appendChild(tdCreateDateTime);
+    tr.appendChild(tdCreateDate);
+    tr.appendChild(tdCreateTime);
+    tr.appendChild(tdLastSaveDate);
+    tr.appendChild(tdLastSaveTime);
     tr.appendChild(tdName);
     tr.appendChild(tdYear);
-    tr.appendChild(tdLastSaveDateTime);
 
     tbody.appendChild(tr);
   });
