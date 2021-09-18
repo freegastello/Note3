@@ -100,12 +100,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const list = eval("(" + request.responseText + ")");// Обязательно обрабатывать!!!
         // insertTable(obj);
         // createTable(document.getElementById('contayner'), list);
+
         createTable(list);
+
         // console.log(list);
 
         // // Здесь мы можем обращаться к свойству объекта и получать	его значение
-        // console.log(obj.id_product);
-        // console.log(obj.qty_product);
+        // console.log(list.id_product);
+        // console.log(list.qty_product);
       }
     });
     request.send(params);
